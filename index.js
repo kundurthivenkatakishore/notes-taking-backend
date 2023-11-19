@@ -11,14 +11,15 @@ connectDB();
 const app = express();
 // Middleware
 app.use(bodyParser.json());
-// const corsOptions = {
-//     origin: 'http://localhost:3000',
-//     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-//     credentials: true,
-//     optionsSuccessStatus: 204,
-// };
+const corsOptions = {
+    origin: 'http://localhost:3000',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+    optionsSuccessStatus: 204,
+    allowedHeaders: 'Content-Type, Authorization',
+};
 
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.use('/user', userRouter)
 app.use("/home", homeRoutes)
