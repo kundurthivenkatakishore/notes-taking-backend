@@ -12,7 +12,7 @@ const app = express();
 // Middleware
 app.use(bodyParser.json());
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: 'http://notes-taking-app-mern.netlify.app',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
     optionsSuccessStatus: 204,
