@@ -11,14 +11,14 @@ connectDB();
 const app = express();
 // Middleware
 app.use(bodyParser.json());
-const corsOptions = {
-    origin: 'https://notes-taking-app-mern.netlify.app',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true,
-    optionsSuccessStatus: 204,
-};
+// const corsOptions = {
+//     origin: 'http://localhost:3000',
+//     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//     credentials: true,
+//     optionsSuccessStatus: 204,
+// };
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.use('/user', userRouter)
 app.use("/home", homeRoutes)
