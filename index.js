@@ -15,8 +15,7 @@ const corsOptions = {
     origin: 'http://notes-taking-app-mern.netlify.app',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
-    optionsSuccessStatus: 204,
-    allowedHeaders: 'Content-Type, Authorization',
+    optionsSuccessStatus: 200,
 };
 
 app.use(cors(corsOptions));
