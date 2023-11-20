@@ -12,7 +12,7 @@ const app = express();
 // Middleware
 app.use(bodyParser.json());
 const corsOptions = {
-    origin: *,
+    origin: '*',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     optionsSuccessStatus: 200,
 };
